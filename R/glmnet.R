@@ -421,8 +421,8 @@ glmnet=function(x,y,family=c("gaussian","binomial","poisson","multinomial","cox"
         }
       }
       ###check on limits
-      if(any(lower.limits>0)){stop("Lower limits should be non-positive")}
-      if(any(upper.limits<0)){stop("Upper limits should be non-negative")}
+      #if(any(lower.limits>0)){stop("Lower limits should be non-positive")}
+      #if(any(upper.limits<0)){stop("Upper limits should be non-negative")}
       lower.limits[lower.limits==-Inf]=-internal.parms$big
       upper.limits[upper.limits==Inf]=internal.parms$big
       if(length(lower.limits)<nvars){
